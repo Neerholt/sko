@@ -1,0 +1,92 @@
+body{
+    background-color:wheat;
+    width: auto;
+    height: auto;
+}
+/*Stylesheet for container*/
+#container{
+    background-color: #e0c9c8;
+    width: 60%;
+    height: 970px;
+    margin-left: auto;
+    margin-right: auto;
+    border: 1px solid black;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    font-family: 'IBM Plex Mono', monospace;
+}
+
+/*Stylesheet for min header container, hvor header og nav-bar er placeret*/
+#header-container{
+    margin-top: -1.9%;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+    height: 12%;
+    background-color: wheat;
+}
+
+/*Stylesheet for min overskrift header*/
+#header{
+    margin-left: auto;
+    margin-right: auto;
+    height: 60%;
+    background-color: #b52f2f;
+}
+
+/*Stylesheet for min nav-bar*/
+#nav-bar{
+    margin-left: auto;
+    margin-right: auto;
+    height: 40%;
+    background-color: #3b3737;
+}
+
+/*Stylesheet for min main-container*/
+#main-container{
+    width: auto;
+    height: 82%;
+    background-color: #e0c9c8;
+    
+}
+
+/*Stylesheet for min footer*/
+#footer{
+    width: 99%;
+    height: 2%; 
+    text-align: right;
+}
+
+
+/*Head nav css start*/
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  font-size: 1.0vw;
+  font-size: 1.5vh;
+  font-family: 'IBM Plex Mono', monospace;
+}
+
+li {
+  float: left;
+}
+
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  
+}
+
+li a:hover:not(.active) {
+  background-color: #111;
+}
+/*Head nav  css slut*/
+
+
