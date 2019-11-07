@@ -10,7 +10,7 @@
     <div id="container"><!--Container-->
         <div id="header-container"><!--Header-Container-->
             <div id="header"><!--header-->
-                <center><font size="5"><h1>Registreret Personer</h1></font></center>  
+                <center><font size="5"><h1>Registreret</h1></font></center>  
             </div><!--header-->
             <div id="nav-bar"><!--navbar-->
                 <ul>
