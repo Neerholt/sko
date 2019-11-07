@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>Forside</title>
+<title>Indtast information</title>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link rel="stylesheet" type="text/css" href="style.css">
@@ -10,14 +10,14 @@
     <div id="container"><!--Container-->
         <div id="header-container"><!--Header-Container-->
             <div id="header"><!--header-->
-                <center><font size="5"><h1>Skostørrelser Undersøgelse</h1></font></center>  
+                <center><font size="5"><h1>Registreret Personer</h1></font></center>  
             </div><!--header-->
             <div id="nav-bar"><!--navbar-->
                 <ul>
-                    <li class="selected"><a href="index.php">Forside</a></li>
+                    <li><a href="index.php">Forside</a></li>
                     <li><a href="Registrer.php">Registrer</a></li>
                     <li><a href="Hyppighed.php">Hyppighed</a></li>
-                    <li><a href="Registreret.php">Registreret</a></li>
+                    <li class="selected"><a href="Hyppighed.php">Registreret</a></li>
                 </ul> 
             </div><!--navbar-->
         </div><!--Header-Container-->
@@ -30,3 +30,10 @@
     </div><!--Container-->
 </body>
 </html>
+
+
+
+
+
+
+
