@@ -108,7 +108,6 @@ li a:hover:not(.active) {
     height: 100%;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     border-radius: 5px;
-    background-color: #d5dbe3;
 }
 
 
@@ -149,19 +148,17 @@ li a:hover:not(.active) {
 
 /*stylesheet for det kasser som er uden om et opslag*/
 #user-data-container{
-  text-align: center;
-  margin-top: 2%;
-  margin-left: 7%;
-  width: 85%;
-  height: 6%;
+  margin-top: 1%;
+  margin-right: auto;
+  margin-left: auto;
+  width: 90%;
+  height: 8%;
   overflow: hidden;
-  box-shadow: 10px 10px 5px grey;
-  font-size: 3vw;
-  font-size: 1.9vh;
-  background-color: #b52f2f;  
+  background-color: #e0c9c8;
   border-radius: 5px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  background-color: #d5dbe3;
 }
-
 
 
 /*Stylesheet for at når der kommer et hvis antal opslag lave denne funktion
@@ -179,4 +176,16 @@ div.ex1{
     margin-left: auto;
     background-color: #e0c9c8;
     
+}
+
+
+table, th, td {
+  border: 1px solid black;
+  border-collapse: collapse;
+}
+th, td {
+  padding: 5px;
+}
+th {
+  text-align: left;
 }

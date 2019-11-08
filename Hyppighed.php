@@ -1,32 +1,70 @@
+<?php include 'databaseconn.php';
+$sql_tabel = "SELECT sko, COUNT(*) AS antal FROM skounder GROUP BY sko"; 
+         $data = mysqli_query($connect,$sql_tabel);
+         $datacheck = mysqli_num_rows($data); 
+?>
 <!DOCTYPE html>
 <html>
 <head>
-<title>Indtast information</title>
+<title>Hyppighed</title>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link rel="stylesheet" type="text/css" href="style.css">
+<link rel="stylesheet" type="text/css" href="stylecsss.css">
 </head>
 <body>
     <div id="container"><!--Container-->
         <div id="header-container"><!--Header-Container-->
             <div id="header"><!--header-->
-                <center><font size="5"><h1>Hyppighed</h1></font></center>  
+                <center><font size="5"><h1>Hyppighed Skostørrelse</h1></font></center>  
             </div><!--header-->
             <div id="nav-bar"><!--navbar-->
                 <ul>
-                    <li><a href="index.php">Forside</a></li>
-                    <li><a href="Registrer.php">Registrer</a></li>
+                    <li><a href="index.php">Registrer</a></li>
                     <li class="selected"><a href="Hyppighed.php">Hyppighed</a></li>
                     <li><a href="Registreret.php">Registreret</a></li>
                 </ul> 
             </div><!--navbar-->
         </div><!--Header-Container-->
         <div id="main-container"><!--main-container-->
-                <center><h1>Test</h1></center>
+                 <div id="registrer-form"><!--registrer-form-->
+                <div id="registrer-form-center"><!--registrer-form-center-->
+                  <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+  <script type="text/javascript">
+    google.charts.load("current", {packages:['corechart']});
+    google.charts.setOnLoadCallback(drawChart);
+    function drawChart() {
+      var data = google.visualization.arrayToDataTable([
+        ['Sko', 'ID'],
+        <?php
+        while ($row = mysqli_fetch_array($result)){
+            echo "['".$row['sko']."', ".$row['ID']."],";
+        }
+        ?>
+      ]);
+
+      var view = new google.visualization.DataView(data);
+      view.setColumns([0, 1,
+                       { calc: "stringify",
+                         sourceColumn: 1,
+                         type: "string",
+                         role: "annotation" },
+                       2]);
+
+      var options = {
+        title: "Skostørrelse",
+        width: 900,
+        height: 550,
+        bar: {groupWidth: "50%"},
+        legend: { position: "none" },
+      };
+      var chart = new google.visualization.ColumnChart(document.getElementById("columnchart_values"));
+      chart.draw(view, options);
+  }
+  </script>
+<div id="columnchart_values" style="width: 900px; height: 300px;"></div>
+                </div><!--registrer-form-center-->
+            </div><!--registrer-form-->
       </div><!--main-container-->
-      <div id="footer"><!--footer-->
-          <p>Website made by Victor Neerholt</p> 
-      </div><!--footer-->
     </div><!--Container-->
 </body>
 </html>
