@@ -1,8 +1,3 @@
-<?php include 'databaseconn.php';
-$sql_tabel = "SELECT sko, COUNT(*) AS antal FROM skounder GROUP BY sko"; 
-         $data = mysqli_query($connect,$sql_tabel);
-         $datacheck = mysqli_num_rows($data); 
-?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -34,12 +29,10 @@ $sql_tabel = "SELECT sko, COUNT(*) AS antal FROM skounder GROUP BY sko";
     google.charts.setOnLoadCallback(drawChart);
     function drawChart() {
       var data = google.visualization.arrayToDataTable([
-        ['Sko', 'ID'],
-        <?php
-        while ($row = mysqli_fetch_array($result)){
-            echo "['".$row['sko']."', ".$row['ID']."],";
-        }
-        ?>
+    ['Element', 'Density', { role: 'style' }],
+         ['Copper', 8.94, '#b87333'],            // RGB value
+         ['Silver', 10.49, 'silver'],            // English color name
+         ['Gold', 19.30, 'gold'],
       ]);
 
       var view = new google.visualization.DataView(data);
@@ -51,7 +44,7 @@ $sql_tabel = "SELECT sko, COUNT(*) AS antal FROM skounder GROUP BY sko";
                        2]);
 
       var options = {
-        title: "Skostørrelse",
+        title: "Skostorrelse",
         width: 900,
         height: 550,
         bar: {groupWidth: "50%"},
