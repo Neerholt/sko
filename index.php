@@ -12,7 +12,7 @@ $vagt = $_POST['vagt'];
     
     
       
-$sql_tabelOne = "INSERT INTO `skounder`(`ID`, `Navn`, `Efternavn`, `Alder`, `mail`, `sko`, `vagt`, `dato`) VALUES (NULL,'$navn','$efternavn','$alder','$email','$sko','$vagt',NULL)";
+$sql_tabelOne = "INSERT INTO `skounder`(`ID`, `Navn`, `Efternavn`, `Alder`, `mail`, `skostoerrelse`, `vagt`, `dato`) VALUES (NULL,'$navn','$efternavn','$alder','$email','$sko','$vagt',NULL)";
 
 mysqli_query($connect,$sql_tabelOne);
 

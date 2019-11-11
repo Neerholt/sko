@@ -46,7 +46,7 @@
                             echo '<th>'.$row['Navn']."&nbsp;".$row['Efternavn'].'</th>';
                             echo '<th>'.$row['Alder'].'</th>';
                             echo '<th>'.$row['mail'].'</th>';
-                            echo '<th>'.$row['sko'].'</th>';
+                            echo '<th>'.$row['skostoerrelse'].'</th>';
                             echo '<th>'.$row['vagt'].'</th>';
                             echo '<th>'.$row['dato'].'</th>';
                             echo '</tr>';

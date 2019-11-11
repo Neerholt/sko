@@ -23,38 +23,46 @@
         <div id="main-container"><!--main-container-->
                  <div id="registrer-form"><!--registrer-form-->
                 <div id="registrer-form-center"><!--registrer-form-center-->
-                  <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
-  <script type="text/javascript">
-    google.charts.load("current", {packages:['corechart']});
-    google.charts.setOnLoadCallback(drawChart);
-    function drawChart() {
-      var data = google.visualization.arrayToDataTable([
-    ['Element', 'Density', { role: 'style' }],
-         ['Copper', 8.94, '#b87333'],            // RGB value
-         ['Silver', 10.49, 'silver'],            // English color name
-         ['Gold', 19.30, 'gold'],
-      ]);
-
-      var view = new google.visualization.DataView(data);
-      view.setColumns([0, 1,
-                       { calc: "stringify",
-                         sourceColumn: 1,
-                         type: "string",
-                         role: "annotation" },
-                       2]);
-
-      var options = {
-        title: "Skostorrelse",
-        width: 900,
-        height: 550,
-        bar: {groupWidth: "50%"},
-        legend: { position: "none" },
-      };
-      var chart = new google.visualization.ColumnChart(document.getElementById("columnchart_values"));
-      chart.draw(view, options);
-  }
-  </script>
-<div id="columnchart_values" style="width: 900px; height: 300px;"></div>
+              <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript">
+      google.charts.load('current', {'packages':['bar']});
+      google.charts.setOnLoadCallback(drawChart);
+      function drawChart() {
+        var data = new google.visualization.DataTable();
+    data.addColumn('string', 'Skostoerrelse');
+    data.addColumn('number', 'Antal');
+    data.addRows([
+          
+          
+          			
+  
+         <?php 
+                     include 'databaseconn.php';
+                     $sql_tabel = "SELECT skostoerrelse, COUNT(*) AS Antal FROM skounder GROUP BY skostoerrelse"; 
+                     $data = mysqli_query($connect,$sql_tabel);
+                      
+                     
+                     while ($row = mysqli_fetch_array($data)){
+                     echo "['".$row[0]."',".$row[1]."],";
+                     }  
+	              
+                                                 
+	?> 
+                       
+                       
+        ]);
+        
+        var options = {
+          chart: {
+            title: 'Hyppighed af skostørrelse'
+            
+          }
+        };
+        var chart = new google.charts.Bar(document.getElementById('columnchart_material'));
+        chart.draw(data, google.charts.Bar.convertOptions(options));
+      }
+    </script>
+    <div id="columnchart_material" style="width: 800px; height: 500px;"></div>
                 </div><!--registrer-form-center-->
             </div><!--registrer-form-->
       </div><!--main-container-->
