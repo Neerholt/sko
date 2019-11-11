@@ -41,10 +41,10 @@
                      }                                         
 	?>                        
         ]);
-         var options = {
-        title: "Skostørrelser",
+        var options = {
         bar: {groupWidth: "20%"},
-        legend: { position: "10%" }
+        backgroundColor: '#e0c9c8',
+        is3D: true
       };
         var chart = new google.charts.Bar(document.getElementById('columnchart_material'));
         chart.draw(data, google.charts.Bar.convertOptions(options));

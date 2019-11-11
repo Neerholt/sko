@@ -49,14 +49,14 @@ mysqli_close($connect);
             <div id="registrer-form"><!--registrer-form-->
                 <div id="registrer-form-center"><!--registrer-form-center-->
                 <center><h1>Registrer dig</h1></center>
-                 <center><hr align="center" width="90%"></center>
-                 <form action="" method="POST">
+                 <center><hr align="center" width="100%"></center>
+                 <center><form action="" method="POST">
                      <br/>
                     <table>
                          <tr>
-                             <td><font size="5"><label>Navn</label></font></td>
-                             <td><font size="5"><label>Efternavn</label></font></td>
-                              <td><font size="5"><label>Alder</label></font></td>
+                             <td><center><font size="5"><label>Navn</label></font></center></td>
+                    <td><center><font size="5"><label>Efternavn</label></font></center></td>
+                              <td><center><font size="5"><label>Alder</label></font></center></td>
                          </tr>
                          <tr>
                              <td><input type="text" name="navn" placeholder="Navn" class="textboxs"></td>
@@ -66,9 +66,9 @@ mysqli_close($connect);
                          </table><br/><br/>
                      <table>
                          <tr>
-                             <td><font size="5"><label>E-mail</label></font></td>
-                             <td><font size="5"><label>Skostørrelse</label></font></td>
-                              <td><font size="5"><label>Vægt</label></font></td>
+                             <td><center><font size="5"><label>E-mail</label></font></center></td>
+                             <td><center><font size="5"><label>Skostørrelse</label></center></font></td>
+                              <td><center><font size="5"><label>Vægt</label></font></center></td>
                          </tr>
                          <tr>
                              <td><input type="text" name="email" placeholder="Email" class="textboxs"></td>
@@ -78,8 +78,7 @@ mysqli_close($connect);
                          </table>
                          
                          <input class="knap" type="submit" name="submit" value="Submit">
-                     </form><br/><br/><br/>
-                  <center><hr align="center" width="90%"></center>
+                     </form></center><br/><br/><br/>
                 </div><!--registrer-form-center-->
             </div><!--registrer-form-->
       </div><!--main-container-->

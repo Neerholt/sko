@@ -106,9 +106,7 @@ li a:hover:not(.active) {
     margin-left: auto;
     width: 60%;
     height: 100%;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     border-radius: 5px;
-    background-color: #d5dbe3;
 }
 
 
@@ -129,6 +127,7 @@ li a:hover:not(.active) {
 #registrer-form-center{
     margin-left: 4%;
     margin-right: auto;
+    background-color: #e0c9c8;
 }
 
 /*Styelsheet for cancel knappen*/
@@ -144,6 +143,7 @@ li a:hover:not(.active) {
   font-size: 1.7vw;
   font-size: 1.7vh;
   border-radius: 5px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
 
