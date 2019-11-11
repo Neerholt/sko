@@ -30,7 +30,6 @@
                      $data = mysqli_query($connect,$sql_tabel);
                      $datacheck = mysqli_num_rows($data); 
                      
-                     if($data){
                          while ($row = mysqli_fetch_assoc($data)){
                             echo '<div id="user-data-container">';
                             echo '<table style="width:100%">';
@@ -53,7 +52,6 @@
                             echo '</table>'; 
                             echo '</div>';
                          }  
-                     }  
                      
                      ?>
                    </div>
